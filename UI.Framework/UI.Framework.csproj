@@ -38,23 +38,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="WebDriver, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.WebDriver.3.8.0\lib\net45\WebDriver.dll</HintPath>
+    <Reference Include="WebDriver, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.9.1\lib\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Selenium.Support.3.8.0\lib\net45\WebDriver.Support.dll</HintPath>
+    <Reference Include="WebDriver.Support, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.9.1\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\Browser.cs" />
-    <Compile Include="Base\CalculatorTypes.cs" />
+    <Compile Include="Common\Amortization.cs" />
+    <Compile Include="Common\Browser.cs" />
+    <Compile Include="Common\Frequency.cs" />
+    <Compile Include="Common\StringValue.cs" />
+    <Compile Include="PageObjects\BasePage.cs" />
     <Compile Include="PageObjects\IndividualsPage.cs" />
     <Compile Include="PageObjects\MortgagePage.cs" />
     <Compile Include="PageObjects\MortgagePaymentCalculatorPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wrappers\WebDriverWrapper.cs" />
+    <Compile Include="Wrappers\BrowserFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

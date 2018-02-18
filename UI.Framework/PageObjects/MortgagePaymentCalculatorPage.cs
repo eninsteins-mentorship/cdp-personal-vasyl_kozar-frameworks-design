@@ -1,14 +1,16 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
-using UI.Framework.Base;
 
 namespace UI.Framework.PageObjects
 {
-    public class MortgagePaymentCalculatorPage
+    public class MortgagePaymentCalculatorPage : BasePage
     {
-        private IWebDriver driver;
+        public MortgagePaymentCalculatorPage(IWebDriver driver) : base(driver)
+        {
+        }
 
+        #region UI Elements
         [FindsBy(How = How.XPath, Using = "//div[@class='row']//button[@id='PrixProprieteMinus']/../*[2]/*/div[@class='slider-handle min-slider-handle custom']")]
         [CacheLookup]
         private IWebElement purchasePriceSlider;
@@ -52,17 +54,9 @@ namespace UI.Framework.PageObjects
         [FindsBy(How = How.XPath, Using = "//*[@class='resultats']")]
         [CacheLookup]
         private IWebElement paiementResult;
+        #endregion
 
-        /// <summary>
-        /// This method clicks the Calculate Your Payments button. Returns nothing.
-        /// </summary>
-        /// <param name="driver"></param>
-        public MortgagePaymentCalculatorPage(IWebDriver driver)
-        {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-        }
-
+        #region UI Usage
         /// <summary>
         /// This method moves the Purchase Price slider to the right. Returns nothing.
         /// </summary>
@@ -126,12 +120,12 @@ namespace UI.Framework.PageObjects
         /// This method selects value from Amortization fields. Returns nothing.
         /// </summary>
         /// <param name="amortizationEnum">use Amortization type</param>
-        public void SelectAmortization(CalculatorTypes.Amortization amortizationEnum)
+        public void SelectAmortization(int amortizationEnum)
         {
             string amortizationPath = "//div[@class='col-med-1-2 col-lg-1-3']//ul//*[";
             amortizationBtn.Click();
             amortizationEnum++;
-            int item = (int)amortizationEnum;
+            int item = amortizationEnum;
             IWebElement amortizationSelect = driver.FindElement(By.XPath(amortizationPath + item + "]"));
             amortizationSelect.Click();
 
@@ -141,12 +135,12 @@ namespace UI.Framework.PageObjects
         /// This method selects value from Payment Frequency field. Returns nothing.
         /// </summary>
         /// <param name="paymentFrequency">use PaymentFrequency type</param>
-        public void SelectPaymentFrequency(CalculatorTypes.PaymentFrequency paymentFrequency)
+        public void SelectPaymentFrequency(int paymentFrequency)
         {
             string paymentFrequencyPath = "//*[@id='FrequenceVersement']//..//..//div[@class='selectric-scroll']//ul//*[";
             paymentFrequencyBtn.Click();
             paymentFrequency++;
-            int item = (int)paymentFrequency;
+            int item = paymentFrequency;
             IWebElement paymentFrequencySelect = driver.FindElement(By.XPath(paymentFrequencyPath + item + "]"));
             paymentFrequencySelect.Click();
 
@@ -179,5 +173,6 @@ namespace UI.Framework.PageObjects
             string[] result = paiementResult.Text.Split(' ');
             return result[5];
         }
+        #endregion
     }
 }

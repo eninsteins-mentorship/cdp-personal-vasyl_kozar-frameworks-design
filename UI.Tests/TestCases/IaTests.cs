@@ -1,9 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
-using UI.Framework.Base;
+using System.Threading;
+using UI.Framework.Common;
 using UI.Framework.PageObjects;
 using UI.Framework.Wrappers;
-using System.Threading;
 
 namespace IA_CA
 {
@@ -47,10 +47,10 @@ namespace IA_CA
             mortgagePaymentCalculatorPage.ClickDownPaymentPlusBtn(4);
 
             // 9. Select 15 years for Amortization
-            mortgagePaymentCalculatorPage.SelectAmortization(CalculatorTypes.Amortization.YEARS15);
+            mortgagePaymentCalculatorPage.SelectAmortization((int)Amortization.YEARS15);
 
             // 10. Select Weekly for Payment Frequency
-            mortgagePaymentCalculatorPage.SelectPaymentFrequency(CalculatorTypes.PaymentFrequency.WEEKLY);
+            mortgagePaymentCalculatorPage.SelectPaymentFrequency((int)Frequency.WEEKLY);
 
             // 11. Change the Interest Rate to 5%
             mortgagePaymentCalculatorPage.SpecifyInterestRate(5.0);

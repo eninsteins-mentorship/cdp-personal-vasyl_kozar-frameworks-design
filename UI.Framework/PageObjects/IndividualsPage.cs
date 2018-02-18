@@ -3,10 +3,13 @@ using OpenQA.Selenium.Support.PageObjects;
 
 namespace UI.Framework.PageObjects
 {
-    public class IndividualsPage
+    public class IndividualsPage : BasePage
     {
-        private IWebDriver driver;
+        public IndividualsPage(IWebDriver driver) : base(driver)
+        {
+        }
 
+        #region UI Elements
         [FindsBy(How = How.XPath, Using = "//a[@href='/mortgage' and @data-utag-name='mortgage_loan']")]
         [CacheLookup]
         private IWebElement mortgagesLink;
@@ -14,13 +17,9 @@ namespace UI.Framework.PageObjects
         [FindsBy(How = How.XPath, Using = "//li[@class='dropdown Pret three-items ']")]
         [CacheLookup]
         private IWebElement loans;
+        #endregion
 
-        public IndividualsPage(IWebDriver driver)
-        {
-            this.driver = driver;
-            PageFactory.InitElements(driver, this);
-        }
-
+        #region UI Usage
         /// <summary>
         /// This method clicks LOANS and clicks Mortgages link. Returns nothing. 
         /// </summary>
@@ -30,5 +29,6 @@ namespace UI.Framework.PageObjects
             mortgagesLink.Click();
             return new MortgagePage(driver);
         }
+        #endregion
     }
 }
