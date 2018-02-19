@@ -1,10 +1,8 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using UI.Framework.PageObjects;
 
 namespace UI.Framework.Wrappers
 {
@@ -16,17 +14,44 @@ namespace UI.Framework.Wrappers
 
         public BrowserFactory()
         {
+            // Reading url from App.config file
             AppUrl = ConfigurationManager.AppSettings["applicationURL"];
         }
 
+        /// <summary>
+        /// Method opens browser.
+        /// </summary>
         public void Start()
         {
-            //TO DO
+            var chromeOptions = new ChromeOptions();
+            Driver = new ChromeDriver(chromeOptions);
         }
 
-        public void GoToUrl()
+        /// <summary>
+        /// Method navigates to page using direct url
+        /// </summary>
+        /// <param name="navigateUrl">url string</param>
+        public void GoToUrl(string navigateUrl = "")
         {
-            // TO DO
+            Driver.Navigate().GoToUrl(AppUrl + navigateUrl);
+        }
+
+        /// <summary>
+        /// Method closes browser
+        /// </summary>
+        public void CloseApp()
+        {
+            Driver?.Quit();
+        }
+
+        /// <summary>
+        /// Method  initializes page
+        /// </summary>
+        /// <typeparam name="T">page type</typeparam>
+        /// <returns> returns proper page object</returns>
+        public T GetPage<T>() where T : BasePage
+        {
+            return (T)Activator.CreateInstance(typeof(T), Driver);
         }
     }
 }

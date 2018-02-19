@@ -23,11 +23,10 @@ namespace UI.Framework.PageObjects
         /// <summary>
         /// This method clicks LOANS and clicks Mortgages link. Returns nothing. 
         /// </summary>
-        public MortgagePage ClickOnTheMortgagesLink()
+        public void ClickOnTheMortgagesLink()
         {
             loans.Click();
             mortgagesLink.Click();
-            return new MortgagePage(driver);
         }
         #endregion
     }

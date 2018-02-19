@@ -61,16 +61,16 @@ namespace UI.Framework.PageObjects
         /// This method moves the Purchase Price slider to the right. Returns nothing.
         /// </summary>
         /// <param name="sliderWidth">Offset X</param>
-        public void SlidePurchasePrice(int sliderWidth)
-        {
-            int xCoord = purchasePriceSlider.Location.X;
-            Actions builder = new Actions(driver);
-            builder.MoveToElement(purchasePriceSlider)
-                   .Click()
-                   .DragAndDropToOffset(purchasePriceSlider, xCoord + sliderWidth, 0)
-                   .Build()
-                   .Perform();
-        }
+        //public void SlidePurchasePrice(int sliderWidth)
+        //{
+        //    int xCoord = purchasePriceSlider.Location.X;
+        //    Actions builder = new Actions(driver);
+        //    builder.MoveToElement(purchasePriceSlider)
+        //           .Click()
+        //           .DragAndDropToOffset(purchasePriceSlider, xCoord + sliderWidth, 0)
+        //           .Build()
+        //           .Perform();
+        //}
 
         /// <summary>
         /// This method gets value of Purchase price field.
@@ -120,31 +120,31 @@ namespace UI.Framework.PageObjects
         /// This method selects value from Amortization fields. Returns nothing.
         /// </summary>
         /// <param name="amortizationEnum">use Amortization type</param>
-        public void SelectAmortization(int amortizationEnum)
-        {
-            string amortizationPath = "//div[@class='col-med-1-2 col-lg-1-3']//ul//*[";
-            amortizationBtn.Click();
-            amortizationEnum++;
-            int item = amortizationEnum;
-            IWebElement amortizationSelect = driver.FindElement(By.XPath(amortizationPath + item + "]"));
-            amortizationSelect.Click();
+        //public void SelectAmortization(int amortizationEnum)
+        //{
+        //    string amortizationPath = "//div[@class='col-med-1-2 col-lg-1-3']//ul//*[";
+        //    amortizationBtn.Click();
+        //    amortizationEnum++;
+        //    int item = amortizationEnum;
+        //    IWebElement amortizationSelect = driver.FindElement(By.XPath(amortizationPath + item + "]"));
+        //    amortizationSelect.Click();
 
-        }
+        //}
 
         /// <summary>
         /// This method selects value from Payment Frequency field. Returns nothing.
         /// </summary>
         /// <param name="paymentFrequency">use PaymentFrequency type</param>
-        public void SelectPaymentFrequency(int paymentFrequency)
-        {
-            string paymentFrequencyPath = "//*[@id='FrequenceVersement']//..//..//div[@class='selectric-scroll']//ul//*[";
-            paymentFrequencyBtn.Click();
-            paymentFrequency++;
-            int item = paymentFrequency;
-            IWebElement paymentFrequencySelect = driver.FindElement(By.XPath(paymentFrequencyPath + item + "]"));
-            paymentFrequencySelect.Click();
+        //public void SelectPaymentFrequency(int paymentFrequency)
+        //{
+        //    string paymentFrequencyPath = "//*[@id='FrequenceVersement']//..//..//div[@class='selectric-scroll']//ul//*[";
+        //    paymentFrequencyBtn.Click();
+        //    paymentFrequency++;
+        //    int item = paymentFrequency;
+        //    IWebElement paymentFrequencySelect = driver.FindElement(By.XPath(paymentFrequencyPath + item + "]"));
+        //    paymentFrequencySelect.Click();
 
-        }
+        //}
 
         /// <summary>
         /// This method inserts value to the Interest Rate field. Returns nothing. 

@@ -7,9 +7,6 @@ namespace UI.Framework.Base
     {
         public object Driver { get; private set; }
 
-        public T GetPage<T>() where T : BasePage
-        {
-            return (T)Activator.CreateInstance(typeof(T), Driver);
-        }
+       
     }
 }

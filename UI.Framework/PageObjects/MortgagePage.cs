@@ -20,10 +20,9 @@ namespace UI.Framework.PageObjects
         /// This method clicks the Calculate Your Payments button. Returns nothing.
         /// </summary>
         /// <returns></returns>
-        public MortgagePaymentCalculatorPage ClickOnCalculateYourPaymentsBtn()
+        public void ClickOnCalculateYourPaymentsBtn()
         {
             calculateYourPayments.Click();
-            return new MortgagePaymentCalculatorPage(driver);
         }
         #endregion
     }
