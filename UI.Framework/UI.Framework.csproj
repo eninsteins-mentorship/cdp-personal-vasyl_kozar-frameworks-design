@@ -53,6 +53,7 @@
     <Compile Include="Common\Frequency.cs" />
     <Compile Include="Common\StringEnum.cs" />
     <Compile Include="Common\StringValue.cs" />
+    <Compile Include="Core\Browser.cs" />
     <Compile Include="PageObjects\BasePage.cs" />
     <Compile Include="PageObjects\IndividualsPage.cs" />
     <Compile Include="PageObjects\MortgagePage.cs" />
