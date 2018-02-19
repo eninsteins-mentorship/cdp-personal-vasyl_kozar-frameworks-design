@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Amortization.cs" />
-    <Compile Include="Common\Browser.cs" />
     <Compile Include="Common\Frequency.cs" />
     <Compile Include="Common\StringEnum.cs" />
     <Compile Include="Common\StringValue.cs" />
