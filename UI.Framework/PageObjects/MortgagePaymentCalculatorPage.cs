@@ -40,11 +40,10 @@ namespace UI.Framework.PageObjects
         /// <param name="sliderWidth">Offset X</param>
         public void SlidePurchasePrice(int sliderWidth)
         {
-            int xCoord = purchasePriceSlider.Location.X;
             Actions builder = new Actions(Driver);
             builder.MoveToElement(purchasePriceSlider)
                    .Click()
-                   .DragAndDropToOffset(purchasePriceSlider, xCoord + sliderWidth, 0)
+                   .DragAndDropToOffset(purchasePriceSlider, sliderWidth, 0)
                    .Build()
                    .Perform();
         }
@@ -146,7 +145,7 @@ namespace UI.Framework.PageObjects
         public string getPaiementResult()
         {
             string[] result = paiementResult.Text.Split(' ');
-            return result[5];
+            return result[6];
         }
         #endregion
     }

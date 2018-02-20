@@ -25,6 +25,7 @@ namespace UI.Framework.Wrappers
         {
             var chromeOptions = new ChromeOptions();
             Driver = new ChromeDriver(chromeOptions);
+            Driver.Manage().Window.Maximize();
         }
 
         /// <summary>
