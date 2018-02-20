@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.PageObjects;
 
 namespace UI.Framework.PageObjects
 {
@@ -11,49 +10,27 @@ namespace UI.Framework.PageObjects
         }
 
         #region UI Elements
-        [FindsBy(How = How.XPath, Using = "//div[@class='row']//button[@id='PrixProprieteMinus']/../*[2]/*/div[@class='slider-handle min-slider-handle custom']")]
-        [CacheLookup]
-        private IWebElement purchasePriceSlider;
+        private IWebElement purchasePriceSlider => Driver.FindElement(By.XPath("//div[@class='row']//button[@id='PrixProprieteMinus']/../*[2]/*/div[@class='slider-handle min-slider-handle custom']"));
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='PrixPropriete']")]
-        [CacheLookup]
-        private IWebElement purchasePriceInput;
+        private IWebElement purchasePriceInput => Driver.FindElement(By.XPath("//*[@id='PrixPropriete']"));
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='PrixProprietePlus']")]
-        [CacheLookup]
-        private IWebElement purchasePricePlusBtn;
+        private IWebElement purchasePricePlusBtn => Driver.FindElement(By.XPath("//*[@id='PrixProprietePlus']"));
 
-        [FindsBy(How = How.XPath, Using = "//button[@id='PrixProprieteMinus']")]
-        [CacheLookup]
-        private IWebElement purchasePriceMinusBtn;
+        private IWebElement purchasePriceMinusBtn => Driver.FindElement(By.XPath("//button[@id='PrixProprieteMinus']"));
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='row']//button[@id='MiseDeFondMinus']/../*[2]/*/div[@class='slider-handle min-slider-handle custom']")]
-        [CacheLookup]
-        private IWebElement downPaymentSlider;
+        private IWebElement downPaymentSlider => Driver.FindElement(By.XPath("//div[@class='row']//button[@id='MiseDeFondMinus']/../*[2]/*/div[@class='slider-handle min-slider-handle custom']"));
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='MiseDeFondPlus']")]
-        [CacheLookup]
-        private IWebElement downPaymentPlusBtn;
+        private IWebElement downPaymentPlusBtn => Driver.FindElement(By.XPath("//*[@id='MiseDeFondPlus']"));
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='col-med-1-2 col-lg-1-3']//b[@class='button']")]
-        [CacheLookup]
-        private IWebElement amortizationBtn;
+        private IWebElement amortizationBtn => Driver.FindElement(By.XPath("//div[@class='col-med-1-2 col-lg-1-3']//b[@class='button']"));
 
-        [FindsBy(How = How.XPath, Using = "//div[@class='selectric-wrapper selectric-responsive']//b")]
-        [CacheLookup]
-        private IWebElement paymentFrequencyBtn;
+        private IWebElement paymentFrequencyBtn => Driver.FindElement(By.XPath("//div[@class='selectric-wrapper selectric-responsive']//b"));
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='TauxInteret']")]
-        [CacheLookup]
-        private IWebElement interestRateField;
+        private IWebElement interestRateField => Driver.FindElement(By.XPath("//*[@id='TauxInteret']"));
 
-        [FindsBy(How = How.XPath, Using = "//*[@id='btn_calculer']")]
-        [CacheLookup]
-        private IWebElement calculateBtn;
+        private IWebElement calculateBtn => Driver.FindElement(By.XPath("//*[@id='btn_calculer']"));
 
-        [FindsBy(How = How.XPath, Using = "//*[@class='resultats']")]
-        [CacheLookup]
-        private IWebElement paiementResult;
+        private IWebElement paiementResult => Driver.FindElement(By.XPath("//*[@class='resultats']"));
         #endregion
 
         #region UI Usage
@@ -61,16 +38,16 @@ namespace UI.Framework.PageObjects
         /// This method moves the Purchase Price slider to the right. Returns nothing.
         /// </summary>
         /// <param name="sliderWidth">Offset X</param>
-        //public void SlidePurchasePrice(int sliderWidth)
-        //{
-        //    int xCoord = purchasePriceSlider.Location.X;
-        //    Actions builder = new Actions(driver);
-        //    builder.MoveToElement(purchasePriceSlider)
-        //           .Click()
-        //           .DragAndDropToOffset(purchasePriceSlider, xCoord + sliderWidth, 0)
-        //           .Build()
-        //           .Perform();
-        //}
+        public void SlidePurchasePrice(int sliderWidth)
+        {
+            int xCoord = purchasePriceSlider.Location.X;
+            Actions builder = new Actions(Driver);
+            builder.MoveToElement(purchasePriceSlider)
+                   .Click()
+                   .DragAndDropToOffset(purchasePriceSlider, xCoord + sliderWidth, 0)
+                   .Build()
+                   .Perform();
+        }
 
         /// <summary>
         /// This method gets value of Purchase price field.
@@ -120,31 +97,29 @@ namespace UI.Framework.PageObjects
         /// This method selects value from Amortization fields. Returns nothing.
         /// </summary>
         /// <param name="amortizationEnum">use Amortization type</param>
-        //public void SelectAmortization(int amortizationEnum)
-        //{
-        //    string amortizationPath = "//div[@class='col-med-1-2 col-lg-1-3']//ul//*[";
-        //    amortizationBtn.Click();
-        //    amortizationEnum++;
-        //    int item = amortizationEnum;
-        //    IWebElement amortizationSelect = driver.FindElement(By.XPath(amortizationPath + item + "]"));
-        //    amortizationSelect.Click();
-
-        //}
+        public void SelectAmortization(int amortizationEnum)
+        {
+            string amortizationPath = "//div[@class='col-med-1-2 col-lg-1-3']//ul//*[";
+            amortizationBtn.Click();
+            amortizationEnum++;
+            int item = amortizationEnum;
+            IWebElement amortizationSelect = Driver.FindElement(By.XPath(amortizationPath + item + "]"));
+            amortizationSelect.Click();
+        }
 
         /// <summary>
         /// This method selects value from Payment Frequency field. Returns nothing.
         /// </summary>
         /// <param name="paymentFrequency">use PaymentFrequency type</param>
-        //public void SelectPaymentFrequency(int paymentFrequency)
-        //{
-        //    string paymentFrequencyPath = "//*[@id='FrequenceVersement']//..//..//div[@class='selectric-scroll']//ul//*[";
-        //    paymentFrequencyBtn.Click();
-        //    paymentFrequency++;
-        //    int item = paymentFrequency;
-        //    IWebElement paymentFrequencySelect = driver.FindElement(By.XPath(paymentFrequencyPath + item + "]"));
-        //    paymentFrequencySelect.Click();
-
-        //}
+        public void SelectPaymentFrequency(int paymentFrequency)
+        {
+            string paymentFrequencyPath = "//*[@id='FrequenceVersement']//..//..//div[@class='selectric-scroll']//ul//*[";
+            paymentFrequencyBtn.Click();
+            paymentFrequency++;
+            int item = paymentFrequency;
+            IWebElement paymentFrequencySelect = Driver.FindElement(By.XPath(paymentFrequencyPath + item + "]"));
+            paymentFrequencySelect.Click();
+        }
 
         /// <summary>
         /// This method inserts value to the Interest Rate field. Returns nothing. 

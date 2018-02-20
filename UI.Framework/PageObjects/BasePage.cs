@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
 
 namespace UI.Framework.PageObjects
 {
@@ -13,9 +12,7 @@ namespace UI.Framework.PageObjects
         }
 
         #region UI Elements
-        [FindsBy(How = How.XPath, Using = "(//*[@aria-label='iA Financial Group Logo'])[2]")]
-        [CacheLookup]
-        private IWebElement Logo;
+        private IWebElement Logo => Driver.FindElement(By.XPath("(//*[@aria-label='iA Financial Group Logo'])[2]"));
         #endregion
 
         #region UI Usage

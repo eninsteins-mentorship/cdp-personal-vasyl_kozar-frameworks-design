@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
 
 namespace UI.Framework.PageObjects
 {
@@ -10,9 +9,7 @@ namespace UI.Framework.PageObjects
         }
 
         #region UI Elements
-        [FindsBy(How = How.XPath, Using = "//a[@href='/mortgage-payment-calculator' and @class='btn-full']")]
-        [CacheLookup]
-        private IWebElement calculateYourPayments;
+        private IWebElement calculateYourPayments => Driver.FindElement(By.XPath("//a[@href='/mortgage-payment-calculator' and @class='btn-full']"));
         #endregion
 
         #region UI Usage

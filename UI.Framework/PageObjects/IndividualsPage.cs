@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
 
 namespace UI.Framework.PageObjects
 {
@@ -10,13 +9,9 @@ namespace UI.Framework.PageObjects
         }
 
         #region UI Elements
-        [FindsBy(How = How.XPath, Using = "//a[@href='/mortgage' and @data-utag-name='mortgage_loan']")]
-        [CacheLookup]
-        private IWebElement mortgagesLink;
+        private IWebElement mortgagesLink => Driver.FindElement(By.XPath("//a[@href='/mortgage' and @data-utag-name='mortgage_loan']"));
 
-        [FindsBy(How = How.XPath, Using = "//li[@class='dropdown Pret three-items ']")]
-        [CacheLookup]
-        private IWebElement loans;
+        private IWebElement loans => Driver.FindElement(By.XPath("//li[@class='dropdown Pret three-items ']"));
         #endregion
 
         #region UI Usage
