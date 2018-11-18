@@ -1,0 +1,23 @@
+﻿{
+  "id": "",
+  "name": "Dastin Hoffman",
+  "username": "dHoffman",
+  "email": "hDastin@april.biz",
+  "address": {
+    "street": "Light Avenue",
+    "suite": "Apt. 71",
+    "city": "London",
+    "zipcode": "92998-3874",
+    "geo": {
+      "lat": "-37.3159",
+      "lng": "81.1496"
+    }
+  },
+  "phone": "1-929-983-8074 x56442",
+  "website": "hildegard.org",
+  "company": {
+    "name": "King-Crown",
+    "catchPhrase": "Multi-layered client-server neural-net",
+    "bs": "e-markets"
+  }
+}
