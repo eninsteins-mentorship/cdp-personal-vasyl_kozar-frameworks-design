@@ -48,6 +48,7 @@
       <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
@@ -64,6 +65,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_User_API.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestSteps\Objects\Endpoint.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Album.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Comment.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Photo.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Post.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Todo.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\User.cs" />
+    <Compile Include="TestSteps\Util\ApiEnvironment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -86,7 +95,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TestSteps\" />
+    <Folder Include="TestSteps\Hooks\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
