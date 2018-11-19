@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChilkatDotNet46, Version=9.5.0.75, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd, processorArchitecture=AMD64">
+      <HintPath>..\packages\chilkat-x64.9.5.0.75\lib\net461\ChilkatDotNet46.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -73,6 +76,7 @@
     <Compile Include="TestSteps\Objects\Endpoints\Todo.cs" />
     <Compile Include="TestSteps\Objects\Endpoints\User.cs" />
     <Compile Include="TestSteps\Util\ApiEnvironment.cs" />
+    <Compile Include="TestSteps\Util\JsonUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -95,6 +99,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Context\" />
     <Folder Include="TestSteps\Hooks\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
