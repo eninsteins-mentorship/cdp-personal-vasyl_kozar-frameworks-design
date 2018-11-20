@@ -49,12 +49,6 @@
     <Compile Include="TestCases\UserTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\API.Framework\API.Framework.csproj">
-      <Project>{d4881a80-bf45-48a7-82b5-bdb49ed7b849}</Project>
-      <Name>API.Framework</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

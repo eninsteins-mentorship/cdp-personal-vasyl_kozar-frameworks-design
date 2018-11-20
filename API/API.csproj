@@ -71,6 +71,31 @@
     <Compile Include="Http\IHttpBuilder.cs" />
     <Compile Include="Http\RestApiBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestScenarios\AlbumEndpoint\GET_Album_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Album_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\CommentEndpoint\GET_Comment_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Comment_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PhotoEndpoint\GET_Photo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Photo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PostEndpoint\GET_Post_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Post_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\GET_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Todo_API.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\UserEndpoint\GET_User_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,6 +127,26 @@
     <None Include="TestData\Todo\todo_update.json" />
     <None Include="TestData\User\user_create.json" />
     <None Include="TestData\User\user_update.json" />
+    <None Include="TestScenarios\AlbumEndpoint\GET_Album_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Album_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\CommentEndpoint\GET_Comment_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Comment_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PhotoEndpoint\GET_Photo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Photo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PostEndpoint\GET_Post_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Post_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\GET_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Todo_API.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\UserEndpoint\GET_User_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_User_API.feature.cs</LastGenOutput>

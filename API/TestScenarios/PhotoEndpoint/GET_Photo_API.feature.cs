@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace API.TestScenarios.UserEndpoint
+namespace API.TestScenarios.PhotoEndpoint
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace API.TestScenarios.UserEndpoint
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("GET_User_API")]
-    public partial class GET_User_APIFeature
+    [NUnit.Framework.DescriptionAttribute("GET_Photo_API")]
+    public partial class GET_Photo_APIFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "GET_User_API.feature"
+#line 1 "GET_Photo_API.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GET_User_API", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GET_Photo_API", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,10 +70,10 @@ namespace API.TestScenarios.UserEndpoint
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01_Get User by Id using API")]
-        public virtual void _01_GetUserByIdUsingAPI()
+        [NUnit.Framework.DescriptionAttribute("01_Get Photo by Id using API")]
+        public virtual void _01_GetPhotoByIdUsingAPI()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Get User by Id using API", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Get Photo by Id using API", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -83,9 +83,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "Value"});
             table1.AddRow(new string[] {
                         "id",
-                        "5"});
+                        "12"});
 #line 4
- testRunner.Given("I make \'GET\' request to \'/users/{id}\'", ((string)(null)), table1, "Given ");
+ testRunner.Given("I make \'GET\' request to \'/photos/{id}\'", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Placeholder",
@@ -104,10 +104,10 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("02_Try to get User using not exist Id")]
-        public virtual void _02_TryToGetUserUsingNotExistId()
+        [NUnit.Framework.DescriptionAttribute("02_Try to get Photo using not exist Id")]
+        public virtual void _02_TryToGetPhotoUsingNotExistId()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Try to get User using not exist Id", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Try to get Photo using not exist Id", null, ((string[])(null)));
 #line 13
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -117,9 +117,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "Value"});
             table3.AddRow(new string[] {
                         "id",
-                        "5000"});
+                        "50000"});
 #line 14
- testRunner.Given("I make \'GET\' request to \'/users/{id}\'", ((string)(null)), table3, "Given ");
+ testRunner.Given("I make \'GET\' request to \'/photos/{id}\'", ((string)(null)), table3, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Placeholder",
@@ -138,10 +138,10 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("03_Get list of users using API")]
-        public virtual void _03_GetListOfUsersUsingAPI()
+        [NUnit.Framework.DescriptionAttribute("03_Get list of photos using API")]
+        public virtual void _03_GetListOfPhotosUsingAPI()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Get list of users using API", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Get list of photos using API", null, ((string[])(null)));
 #line 23
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -150,7 +150,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Placeholder",
                         "Value"});
 #line 24
- testRunner.Given("I make \'GET\' request to \'/users\'", ((string)(null)), table5, "Given ");
+ testRunner.Given("I make \'GET\' request to \'/photos\'", ((string)(null)), table5, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Placeholder",
