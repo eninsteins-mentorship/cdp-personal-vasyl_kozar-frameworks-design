@@ -2,7 +2,7 @@
 
 namespace API.TestSteps.Util
 {
-    class ApiEnvironment
+    class RestEnvironment
     {
         public static void SetEnvironment(string environmentUrl)
         {

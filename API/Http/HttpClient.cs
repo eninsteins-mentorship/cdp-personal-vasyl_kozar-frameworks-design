@@ -20,6 +20,11 @@ namespace API.Http
             Client.BaseUrl = new Uri(baseUrl);
         }
 
+        public static IHttpBuilder RestApiBuilder()
+        {
+            return new RestApiBuilder();
+        }
+
         private static Dictionary<string, string> GetMap(Dictionary<string, string> map) =>
             map ?? new Dictionary<string, string>();
 

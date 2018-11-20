@@ -73,6 +73,24 @@ namespace API.TestScenarios.UserEndpoint
         {
 #line 3
 #line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Placeholder",
+                        "Value"});
+            table1.AddRow(new string[] {
+                        "id",
+                        "5"});
+#line 4
+ testRunner.Given("I make \'GET\' request to \'/users/{id}\'", ((string)(null)), table1, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Placeholder",
+                        "Value"});
+            table2.AddRow(new string[] {
+                        "Content-Type",
+                        "application/json"});
+#line 7
+ testRunner.And("request contains headers", ((string)(null)), table2, "And ");
+#line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
@@ -80,11 +98,15 @@ namespace API.TestScenarios.UserEndpoint
         public virtual void _01_GetUserByIdUsingAPI()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Get User by Id using API", null, ((string[])(null)));
-#line 5
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
 this.FeatureBackground();
+#line 12
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
