@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1D79B7F-7E95-4DE6-B92B-42910148B636}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>API</RootNamespace>
+    <AssemblyName>API</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChilkatDotNet46, Version=9.5.0.75, Culture=neutral, PublicKeyToken=eb5fc1fc52ef09bd, processorArchitecture=AMD64">
+      <HintPath>..\packages\chilkat-x64.9.5.0.75\lib\net461\ChilkatDotNet46.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.4.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\ApiContext.cs" />
+    <Compile Include="Context\ContextFactory.cs" />
+    <Compile Include="Context\HttpContext.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TableExtensions.cs" />
+    <Compile Include="Http\HttpClient.cs" />
+    <Compile Include="Http\IClient.cs" />
+    <Compile Include="Http\IHttpBuilder.cs" />
+    <Compile Include="Http\RestApiBuilder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestScenarios\AlbumEndpoint\GET_Album_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Album_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\CommentEndpoint\GET_Comment_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Comment_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PhotoEndpoint\GET_Photo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Photo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PostEndpoint\GET_Post_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Post_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\DELETE_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_Todo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\GET_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_Todo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\POST_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_Todo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\PUT_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_Todo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\DELETE_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_User_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\GET_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GET_User_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\POST_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_User_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\PUT_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_User_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestSteps\HttpSteps.cs" />
+    <Compile Include="TestSteps\Objects\Endpoint.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Album.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Comment.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Photo.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Post.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\Todo.cs" />
+    <Compile Include="TestSteps\Objects\Endpoints\User.cs" />
+    <Compile Include="TestSteps\Util\RestEnvironment.cs" />
+    <Compile Include="TestSteps\Util\JsonUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="TestData\Album\album_create.json" />
+    <None Include="TestData\Album\album_update.json" />
+    <None Include="TestData\Comment\comment_create.json" />
+    <None Include="TestData\Comment\commet_update.json" />
+    <None Include="TestData\Photo\photo_create.json" />
+    <None Include="TestData\Photo\photo_update.json" />
+    <None Include="TestData\Post\post_create.json" />
+    <None Include="TestData\Post\post_update.json" />
+    <None Include="TestData\Todo\todo_create.json" />
+    <None Include="TestData\Todo\todo_update.json" />
+    <None Include="TestData\User\user_create.json" />
+    <None Include="TestData\User\user_update.json" />
+    <None Include="TestScenarios\AlbumEndpoint\GET_Album_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Album_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\CommentEndpoint\GET_Comment_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Comment_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PhotoEndpoint\GET_Photo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Photo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PostEndpoint\GET_Post_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Post_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\DELETE_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_Todo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\GET_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_Todo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\POST_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_Todo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\PUT_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_Todo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\UserEndpoint\DELETE_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_User_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\UserEndpoint\GET_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GET_User_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\UserEndpoint\POST_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_User_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\UserEndpoint\PUT_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_User_API.feature.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestSteps\Hooks\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.0\build\SpecFlow.targets'))" />
+  </Target>
+  <Import Project="..\packages\SpecFlow.2.4.0\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" />
+</Project>
