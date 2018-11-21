@@ -18,20 +18,20 @@ namespace API.TestScenarios.UserEndpoint
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("POST_User_API")]
-    public partial class POST_User_APIFeature
+    [NUnit.Framework.DescriptionAttribute("PUT_User_API")]
+    public partial class PUT_User_APIFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "POST_User_API.feature"
+#line 1 "PUT_User_API.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "POST_User_API", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PUT_User_API", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,8 +76,11 @@ namespace API.TestScenarios.UserEndpoint
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Placeholder",
                         "Value"});
+            table1.AddRow(new string[] {
+                        "id",
+                        "3"});
 #line 4
- testRunner.Given("I make \'POST\' request to \'/users\'", ((string)(null)), table1, "Given ");
+ testRunner.Given("I make \'PUT\' request to \'/users/{id}\'", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Placeholder",
@@ -85,17 +88,17 @@ namespace API.TestScenarios.UserEndpoint
             table2.AddRow(new string[] {
                         "Content-Type",
                         "application/json"});
-#line 6
+#line 7
  testRunner.And("request contains headers", ((string)(null)), table2, "And ");
 #line hidden
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01_Create User using API call")]
-        public virtual void _01_CreateUserUsingAPICall()
+        [NUnit.Framework.DescriptionAttribute("01_Update User using API call")]
+        public virtual void _01_UpdateUserUsingAPICall()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Create User using API call", null, ((string[])(null)));
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Update User using API call", null, ((string[])(null)));
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -105,12 +108,12 @@ this.FeatureBackground();
                         "Attribute",
                         "Type",
                         "Value"});
-#line 11
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table3, "Given ");
-#line 13
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 12
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table3, "Given ");
 #line 14
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 15
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Attribute",
@@ -119,19 +122,19 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "name",
                         "string",
-                        "Dastin Hoffman"});
-#line 15
+                        "Till Scwiger"});
+#line 16
  testRunner.And("response has fallowing attribute:", ((string)(null)), table4, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("02_Create User without name")]
-        public virtual void _02_CreateUserWithoutName()
+        [NUnit.Framework.DescriptionAttribute("02_Update User without name")]
+        public virtual void _02_UpdateUserWithoutName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Create User without name", null, ((string[])(null)));
-#line 19
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Update User without name", null, ((string[])(null)));
+#line 20
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -145,22 +148,22 @@ this.FeatureBackground();
                         "name",
                         "null",
                         ""});
-#line 20
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table5, "Given ");
-#line 23
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 21
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table5, "Given ");
 #line 24
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("03_Create User without username")]
-        public virtual void _03_CreateUserWithoutUsername()
+        [NUnit.Framework.DescriptionAttribute("03_Update User without username")]
+        public virtual void _03_UpdateUserWithoutUsername()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Create User without username", null, ((string[])(null)));
-#line 26
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Update User without username", null, ((string[])(null)));
+#line 27
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -174,22 +177,22 @@ this.FeatureBackground();
                         "username",
                         "null",
                         ""});
-#line 27
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table6, "Given ");
-#line 30
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 28
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table6, "Given ");
 #line 31
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("04_Create User without username")]
-        public virtual void _04_CreateUserWithoutUsername()
+        [NUnit.Framework.DescriptionAttribute("04_Update User without username")]
+        public virtual void _04_UpdateUserWithoutUsername()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04_Create User without username", null, ((string[])(null)));
-#line 33
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04_Update User without username", null, ((string[])(null)));
+#line 34
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -203,26 +206,26 @@ this.FeatureBackground();
                         "email",
                         "null",
                         ""});
-#line 34
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table7, "Given ");
-#line 37
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table7, "Given ");
 #line 38
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 39
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("05_Create User without Address field")]
-        [NUnit.Framework.TestCaseAttribute("null", "Apt. 71", "London", "92998-3874", null)]
-        [NUnit.Framework.TestCaseAttribute("Light Avenue", "null", "London", "92998-3874", null)]
-        [NUnit.Framework.TestCaseAttribute("Light Avenue", "Apt. 71", "null", "92998-3874", null)]
-        [NUnit.Framework.TestCaseAttribute("Light Avenue", "Apt. 71", "London", "null", null)]
-        public virtual void _05_CreateUserWithoutAddressField(string street, string suite, string city, string zipcode, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("05_Update User without Address field")]
+        [NUnit.Framework.TestCaseAttribute("null", "Apt. 11", "Paris", "9387482998-3874", null)]
+        [NUnit.Framework.TestCaseAttribute("Dark Avenue", "null", "Paris", "38748-3874", null)]
+        [NUnit.Framework.TestCaseAttribute("Dark Avenue", "Apt. 11", "null", "38748-3874", null)]
+        [NUnit.Framework.TestCaseAttribute("Dark Avenue", "Apt. 11", "Paris", "null", null)]
+        public virtual void _05_UpdateUserWithoutAddressField(string street, string suite, string city, string zipcode, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05_Create User without Address field", null, exampleTags);
-#line 40
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05_Update User without Address field", null, exampleTags);
+#line 41
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -248,24 +251,24 @@ this.FeatureBackground();
                         "address.zipcode",
                         "string",
                         string.Format("{0}", zipcode)});
-#line 41
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table8, "Given ");
-#line 47
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table8, "Given ");
 #line 48
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 49
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("06_Create User without Geo field")]
+        [NUnit.Framework.DescriptionAttribute("06_Update User without Geo field")]
         [NUnit.Framework.TestCaseAttribute("null", "81.1496", null)]
         [NUnit.Framework.TestCaseAttribute("-37.3159", "null", null)]
-        public virtual void _06_CreateUserWithoutGeoField(string lat, string lng, string[] exampleTags)
+        public virtual void _06_UpdateUserWithoutGeoField(string lat, string lng, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06_Create User without Geo field", null, exampleTags);
-#line 56
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06_Update User without Geo field", null, exampleTags);
+#line 57
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -283,22 +286,22 @@ this.FeatureBackground();
                         "geo.lng",
                         "string",
                         string.Format("{0}", lng)});
-#line 57
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table9, "Given ");
-#line 61
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 58
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table9, "Given ");
 #line 62
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 63
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("07_Create User without phone")]
-        public virtual void _07_CreateUserWithoutPhone()
+        [NUnit.Framework.DescriptionAttribute("07_Update User without phone")]
+        public virtual void _07_UpdateUserWithoutPhone()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07_Create User without phone", null, ((string[])(null)));
-#line 68
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07_Update User without phone", null, ((string[])(null)));
+#line 69
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -312,22 +315,22 @@ this.FeatureBackground();
                         "phone",
                         "null",
                         ""});
-#line 69
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table10, "Given ");
-#line 72
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 70
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table10, "Given ");
 #line 73
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("08_Create User without website")]
-        public virtual void _08_CreateUserWithoutWebsite()
+        [NUnit.Framework.DescriptionAttribute("08_Update User without website")]
+        public virtual void _08_UpdateUserWithoutWebsite()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08_Create User without website", null, ((string[])(null)));
-#line 75
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08_Update User without website", null, ((string[])(null)));
+#line 76
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -341,25 +344,25 @@ this.FeatureBackground();
                         "website",
                         "null",
                         ""});
-#line 76
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table11, "Given ");
-#line 79
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 77
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table11, "Given ");
 #line 80
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 81
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("09_Create User without company field")]
-        [NUnit.Framework.TestCaseAttribute("null", "Multi-layered client-server neural-net", "e-markets", null)]
-        [NUnit.Framework.TestCaseAttribute("King-Crown", "null", "e-markets", null)]
-        [NUnit.Framework.TestCaseAttribute("King-Crown", "Multi-layered client-server neural-net", "null", null)]
-        public virtual void _09_CreateUserWithoutCompanyField(string name, string catchPhrase, string bs, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("09_Update User without company field")]
+        [NUnit.Framework.TestCaseAttribute("null", "Multi-layered client-server neural-net", "e-magazine", null)]
+        [NUnit.Framework.TestCaseAttribute("Sunny-Garden", "null", "e-magazine", null)]
+        [NUnit.Framework.TestCaseAttribute("Sunny-Garden", "Multi-layered client-server neural-net", "null", null)]
+        public virtual void _09_UpdateUserWithoutCompanyField(string name, string catchPhrase, string bs, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09_Create User without company field", null, exampleTags);
-#line 82
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09_Update User without company field", null, exampleTags);
+#line 83
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
@@ -381,12 +384,12 @@ this.FeatureBackground();
                         "company.bs",
                         "string",
                         string.Format("{0}", bs)});
-#line 83
- testRunner.Given("request has body from file \'User\\user_create.json\'", ((string)(null)), table12, "Given ");
-#line 88
- testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 84
+ testRunner.Given("request has body from file \'User\\user_update.json\'", ((string)(null)), table12, "Given ");
 #line 89
- testRunner.Then("response code is \'201\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I send a request", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 90
+ testRunner.Then("response code is \'200\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

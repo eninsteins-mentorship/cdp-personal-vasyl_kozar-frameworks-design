@@ -97,6 +97,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Todo_API.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\DELETE_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_User_API.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\UserEndpoint\GET_User_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +111,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>POST_User_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\PUT_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_User_API.feature</DependentUpon>
     </Compile>
     <Compile Include="TestSteps\HttpSteps.cs" />
     <Compile Include="TestSteps\Objects\Endpoint.cs" />
@@ -153,6 +163,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Todo_API.feature.cs</LastGenOutput>
     </None>
+    <None Include="TestScenarios\UserEndpoint\DELETE_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_User_API.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\UserEndpoint\GET_User_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_User_API.feature.cs</LastGenOutput>
@@ -160,6 +174,10 @@
     <None Include="TestScenarios\UserEndpoint\POST_User_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>POST_User_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\UserEndpoint\PUT_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_User_API.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
