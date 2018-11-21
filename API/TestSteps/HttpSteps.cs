@@ -86,16 +86,14 @@ namespace API.TestSteps
                 Assert.AreEqual(json.StringOf(row[0]), null, $"key is not present: {row[0]}");
         }
 
-        [Then(@"response contains the fallowing error message:")]
+        [Then(@"response contains the fallowing message:")]
         public void ThenResponseContainsFallowingErrorMessage(Table table)
         {
             var context = ContextFactory.Get<HttpContext>(ApiContext.Http);
-            JsonObject json = JsonUtil.LoadJsonObject(context.Response.Content);
+
             foreach (var row in table.Rows)
             {
-                JsonObject propertyError = json.FindRecord("details", "property", row[0], true);
-                Assert.IsTrue(propertyError != null, "Error meesage not found " + row[0]);
-                Assert.AreEqual(row[1], propertyError.StringOf("messages[0]"));
+                Assert.IsTrue(context.Response.Content.Contains(row[0].ToString()));
             }
         }
     }

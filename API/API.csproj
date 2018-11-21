@@ -92,10 +92,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Post_API.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\DELETE_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_Todo_API.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\TodoEndpoint\GET_Todo_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Todo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\POST_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_Todo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\TodoEndpoint\PUT_Todo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_Todo_API.feature</DependentUpon>
     </Compile>
     <Compile Include="TestScenarios\UserEndpoint\DELETE_User_API.feature.cs">
       <AutoGen>True</AutoGen>
@@ -159,9 +174,21 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Post_API.feature.cs</LastGenOutput>
     </None>
+    <None Include="TestScenarios\TodoEndpoint\DELETE_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_Todo_API.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\TodoEndpoint\GET_Todo_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Todo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\POST_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_Todo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\TodoEndpoint\PUT_Todo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_Todo_API.feature.cs</LastGenOutput>
     </None>
     <None Include="TestScenarios\UserEndpoint\DELETE_User_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
