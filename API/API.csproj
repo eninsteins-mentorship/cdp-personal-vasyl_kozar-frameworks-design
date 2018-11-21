@@ -65,6 +65,7 @@
     <Compile Include="Context\ApiContext.cs" />
     <Compile Include="Context\ContextFactory.cs" />
     <Compile Include="Context\HttpContext.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\TableExtensions.cs" />
     <Compile Include="Http\HttpClient.cs" />
     <Compile Include="Http\IClient.cs" />
@@ -100,6 +101,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_User_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\UserEndpoint\POST_User_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_User_API.feature</DependentUpon>
     </Compile>
     <Compile Include="TestSteps\HttpSteps.cs" />
     <Compile Include="TestSteps\Objects\Endpoint.cs" />
@@ -150,6 +156,10 @@
     <None Include="TestScenarios\UserEndpoint\GET_User_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_User_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\UserEndpoint\POST_User_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_User_API.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
