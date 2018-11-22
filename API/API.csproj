@@ -72,25 +72,85 @@
     <Compile Include="Http\IHttpBuilder.cs" />
     <Compile Include="Http\RestApiBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestScenarios\AlbumEndpoint\DELETE_Album_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_Album_API.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\AlbumEndpoint\GET_Album_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Album_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\AlbumEndpoint\POST_Album_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_Album_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\AlbumEndpoint\PUT_Album_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_Album_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\CommentEndpoint\DELETE_Comment_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_Comment_API.feature</DependentUpon>
     </Compile>
     <Compile Include="TestScenarios\CommentEndpoint\GET_Comment_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Comment_API.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestScenarios\CommentEndpoint\POST_Comment_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_Comment_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\CommentEndpoint\PUT_Comment_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_Comment_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PhotoEndpoint\DELETE_Photo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_Photo_API.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\PhotoEndpoint\GET_Photo_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Photo_API.feature</DependentUpon>
     </Compile>
+    <Compile Include="TestScenarios\PhotoEndpoint\POST_Photo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_Photo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PhotoEndpoint\PUT_Photo_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_Photo_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PostEndpoint\DELETE_Post_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DELETE_Post_API.feature</DependentUpon>
+    </Compile>
     <Compile Include="TestScenarios\PostEndpoint\GET_Post_API.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GET_Post_API.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PostEndpoint\POST_Post_API.feature.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POST_Post_API.feature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="TestScenarios\PostEndpoint\PUT_Post_API.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PUT_Post_API.feature</DependentUpon>
     </Compile>
     <Compile Include="TestScenarios\TodoEndpoint\DELETE_Todo_API.feature.cs">
       <AutoGen>True</AutoGen>
@@ -158,21 +218,69 @@
     <None Include="TestData\Todo\todo_update.json" />
     <None Include="TestData\User\user_create.json" />
     <None Include="TestData\User\user_update.json" />
+    <None Include="TestScenarios\AlbumEndpoint\DELETE_Album_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_Album_API.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\AlbumEndpoint\GET_Album_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Album_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\AlbumEndpoint\POST_Album_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_Album_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\AlbumEndpoint\PUT_Album_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_Album_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\CommentEndpoint\DELETE_Comment_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_Comment_API.feature.cs</LastGenOutput>
     </None>
     <None Include="TestScenarios\CommentEndpoint\GET_Comment_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Comment_API.feature.cs</LastGenOutput>
     </None>
+    <None Include="TestScenarios\CommentEndpoint\POST_Comment_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_Comment_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\CommentEndpoint\PUT_Comment_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_Comment_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PhotoEndpoint\DELETE_Photo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_Photo_API.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\PhotoEndpoint\GET_Photo_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Photo_API.feature.cs</LastGenOutput>
     </None>
+    <None Include="TestScenarios\PhotoEndpoint\POST_Photo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_Photo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PhotoEndpoint\PUT_Photo_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_Photo_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PostEndpoint\DELETE_Post_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DELETE_Post_API.feature.cs</LastGenOutput>
+    </None>
     <None Include="TestScenarios\PostEndpoint\GET_Post_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GET_Post_API.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PostEndpoint\POST_Post_API.feature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>POST_Post_API.feature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="TestScenarios\PostEndpoint\PUT_Post_API.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PUT_Post_API.feature.cs</LastGenOutput>
     </None>
     <None Include="TestScenarios\TodoEndpoint\DELETE_Todo_API.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
